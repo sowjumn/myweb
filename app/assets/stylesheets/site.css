@@ -1,0 +1,100 @@
+h1 {
+  font-size: 31px;
+  line-height: 1.5;
+  color: #333;
+}
+
+h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.navigation {
+  width: 30%;
+  margin-top: 60px;
+  padding-right: 30px;
+  float: left;
+}
+
+.name {
+  text-align: right;
+}
+
+.content {
+  width: auto;
+  float: none;
+  padding-left: 60px;
+  margin-top: 90px;
+  padding-right: 200px;
+  overflow: hidden;
+  color: black;
+  border-left: 1px solid white;
+}
+
+a.social-button {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid #cac5c5;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.row {
+  width: 100%;
+  display: inline-block;
+}
+
+img {
+  width: 190px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: 3px 3px 3px #777;
+  -moz-box-shadow: 3px 3px 3px #777;
+  box-shadow: 3px 3px 3px #777;
+}
+
+body {
+  background-color: #E5EAEE;
+  font-family: sans-serif;
+}
+
+.navigation ul {
+  height: 100px;
+  text-align: right;
+}
+
+@media only screen
+and (min-width : 1224px) {
+  .navigation {
+    height: 500px;
+  }
+
+  .content {
+    height: 500px;
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+  .navigation {
+    height: 200px;
+  }
+
+  .content {
+    height: 200px;
+  }
+}
+
+
+
