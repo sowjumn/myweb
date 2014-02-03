@@ -45,6 +45,7 @@ body {
 .content {
   padding-left: 60px;
   color: black;
+  text-align: justify;
 }
 
 .name {
