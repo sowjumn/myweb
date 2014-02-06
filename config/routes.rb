@@ -1,5 +1,12 @@
 Myweb::Application.routes.draw do
   root 'welcome#index'
+  resources :blogs
+  resources :projects
+
+  namespace :admin do
+    resources :blogs
+    resources :projects
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
