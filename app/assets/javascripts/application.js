@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require vendor/backbone
-//= require vendor/underscore
 //= require hogan
+//= require vendor/underscore
+//= require vendor/backbone
 //= require_tree .

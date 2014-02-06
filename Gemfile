@@ -10,19 +10,20 @@ gem 'mustache'
 gem 'hogan_assets'
 
 group :development, :test do
-	gem 'awesome_print'
-	gem 'rspec-rails'
+  gem 'dotenv-rails'
+  gem 'awesome_print'
+  gem 'rspec-rails'
 end
 
 group :test do
-	gem 'selenium-webdriver'
-	gem 'capybara'
-	gem 'cucumber-rails', require: false
-	gem 'database_cleaner'
+  gem 'selenium-webdriver'
+  gem 'capybara'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
 end
 
 group :production do
-	gem 'rails_12factor'
+  gem 'rails_12factor'
 end
 
 
