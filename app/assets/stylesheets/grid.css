@@ -1,9 +1,36 @@
 .row {
-  display: block;
+  width: 100%;
+  overflow: hidden;
 }
 
 .unit {
   float: left;
+}
+
+.unit-right {
+  float: right;
+}
+
+.inner {
+  padding: 10px;
+  overflow: hidden;
+}
+
+.double-inner {
+  padding: 10px;
+  overflow: hidden;
+}
+
+.vertical-inner {
+  padding: 10px 0;
+}
+
+.horizontal-inner {
+  padding: 0 10px;
+}
+
+.top-inner {
+  padding-top: 10px;
 }
 
 .col1of1 {
@@ -50,4 +77,8 @@
   display: table-cell;
   float: none;
   width: auto;
+}
+
+.some-height {
+  height: 200px;
 }

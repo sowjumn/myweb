@@ -30,6 +30,19 @@ body {
   font-family: sans-serif;
 }
 
+input {
+  width: 300px;
+  padding: 8px;
+  margin: 0 0 20px;
+  -web-kit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #5392f0;
+}
+
 .main {
 	margin-top: 100px;
 }
