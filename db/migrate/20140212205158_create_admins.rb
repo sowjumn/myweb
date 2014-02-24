@@ -4,6 +4,9 @@ class CreateAdmins < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string :password_digest
+      t.boolean :trust
+
+      t.timestamps
     end
   end
 end
