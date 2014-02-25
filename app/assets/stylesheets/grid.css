@@ -25,6 +25,14 @@
   padding: 10px 0;
 }
 
+.vertical-double-inner {
+  padding: 20px 0;
+}
+
+.vertical-half-inner {
+  padding: 5px 0;
+}
+
 .horizontal-inner {
   padding: 0 10px;
 }

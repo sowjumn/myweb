@@ -9,6 +9,12 @@ Myweb::Application.routes.draw do
     resources :projects
   end
 
+  resources :sessions, only: [:new, :create, :destroy]
+
+  match  '/admin_signup', to: 'admins#new', via: :get
+  match '/admin_signin', to: 'sessions#new', via: :get
+  match '/admin_signout', to: 'sessions#destroy', via: :delete
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
