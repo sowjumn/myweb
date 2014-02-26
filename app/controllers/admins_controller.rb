@@ -6,6 +6,7 @@ class AdminsController < ApplicationController
   def create
     @admin = Admin.new(admin_params)
     if @admin.save
+      sign_in @admin
       flash[:success] = "You have successfully signedup. It takes 24 hours to activate ur login"
       redirect_to @admin
     else
