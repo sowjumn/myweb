@@ -12,6 +12,7 @@
         <%= render 'shared/error_messages' %>
       </div>
       <form accept-charset="UTF-8" action="/admins" method="post">
+        <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
         <div class="row vertical-half-inner">
           <label for="admin_name">Name</label>
         </div>
