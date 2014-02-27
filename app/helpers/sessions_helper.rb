@@ -20,8 +20,9 @@ module SessionsHelper
   end
 
   def sign_out
-    self.current_admin = nil
+    current_admin.update_attribute(:remember_token, Admin.encrypt(Admin.new_remember_token))
     cookies.delete(:remember_token)
+    self.current_admin = nil
   end
 
   def current_admin?(admin)
