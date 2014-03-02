@@ -49,6 +49,6 @@ class AdminsController < ApplicationController
 
     def correct_admin
       @admin = Admin.find(params[:id])
-      redirect_to(root_url) unless current_admin?(@admin)
+      redirect_to(root_url) unless (@admin.trust && current_admin?(@admin)) 
     end
 end
