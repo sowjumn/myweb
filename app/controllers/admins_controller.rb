@@ -35,9 +35,7 @@ class AdminsController < ApplicationController
 
   private
     def admin_params
-      u = params.require(:admin).permit(:name, :email, :password, :password_confirmation)
-      u["trust"] = false
-      u
+      params.require(:admin).permit(:name, :email, :password, :password_confirmation)
     end
 
     def signed_in_admin

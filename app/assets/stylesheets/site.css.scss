@@ -43,6 +43,11 @@ input {
   border: 1px solid #5392f0;
 }
 
+input[type="submit"] {
+  width: 100px;
+  background-color: #5FD3DD;
+}
+
 input.btn {
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.2); 
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.2); 
@@ -53,46 +58,16 @@ input.btn {
   background-color: #7AAA3B;
 }
 
-.main {
-	margin-top: 100px;
-}
-
-.navigation {
-  padding-right: 30px;
-}
-
-.navigation ul {
-  text-align: right;
-}
-
-.content {
-  padding-left: 60px;
-  color: black;
-  text-align: justify;
-}
-
-.name {
-  text-align: right;
-}
-
-a.social-button {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 14px;
-  border: 1px solid #cac5c5;
-  background-color: whitesmoke;
-  border-radius: 4px;
-  padding: 4px;
-}
-
-
 .f-left {
-	float: left;
+  float: left;
 }
 
 .f-right {
-	float: right;
+  float: right;
+}
+
+.f-center {
+  text-align: center;
 }
 
 
