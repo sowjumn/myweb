@@ -13,7 +13,6 @@ class AdminsController < ApplicationController
     @admin = Admin.new(admin_params)
     if @admin.save
       sign_in @admin
-      flash[:success] = "You have successfully signedup. It takes 24 hours to activate ur login"
       redirect_to @admin
     else
       render 'new'
@@ -36,17 +35,5 @@ class AdminsController < ApplicationController
   private
     def admin_params
       params.require(:admin).permit(:name, :email, :password, :password_confirmation)
-    end
-
-    def signed_in_admin
-      unless signed_in?
-        store_location
-        redirect_to admin_signin_url, notice: "Please sign in"
-      end
-    end
-
-    def correct_admin
-      @admin = Admin.find(params[:id])
-      redirect_to(root_url) unless (@admin.trust && current_admin?(@admin)) 
     end
 end
