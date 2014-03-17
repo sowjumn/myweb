@@ -14,7 +14,7 @@
   </div>
 
   <div class="unit col1of10 inner top-padding">
-    <a href="/blog">Blog</a>
+    <a href="/blogs">Blog</a>
   </div>
 
   <div class="unit col1of10 inner top-padding">
@@ -25,3 +25,13 @@
     <a href="/presentations">Presentations</a>
   </div>
 </div>
+<% if signed_in? %>
+  <div class="row">
+    <div class="unit col1of2">
+    <%= link_to 'Admin', {controller: 'admins', action: 'show', id: current_admin.id} %>
+  </div>
+  <div class="unit col1of2">
+    <%= link_to 'Signout', {controller: 'sessions', action: 'destroy', id: current_admin.id}, method: :delete %>
+  </div>
+  </div>
+<% end %>

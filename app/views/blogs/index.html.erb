@@ -1,0 +1,30 @@
+<div class="row blog-container">
+  <div class="unit col1of3">
+    <div class="row inner"><h2 class="blog-title">Posts</h2></div>
+    <% @blogs_all.each do |blog| %>
+    <div class="row inner">
+      <a href="<%= blog_path(blog.id) %>"><%= blog.title %></a>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="unit col2of3">
+    <% @blogs_all[0..4].each do |blog| %>
+    <div class="row">
+      <div class="double-inner blog-content">
+        <div class="blog-title"><%=blog.title%></div>
+        <p><%= blog.para1 %></p>
+        <p><%= blog.para2 %></p>
+        <p><%= blog.para3 %></p>
+        <div class="row">
+          <% if signed_in? %>
+          <%= link_to 'edit', edit_blog_path(blog)%>
+          <%= link_to 'Delete Blog', {controller: 'blogs', action: 'destroy', id: blog.id}, method: :delete %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <% end %>  
+  </div>
+</div>
+

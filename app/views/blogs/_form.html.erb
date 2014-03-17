@@ -1,0 +1,36 @@
+<%= form_for(@blog) do |f| %>
+
+<div class="row">
+  <%= f.label :title %>
+</div>
+<div class="row">
+  <%= f.text_field :title %>
+</div>
+
+<div class="row">
+  <%= f.label :para1 %>
+</div>
+<div class="row bottom-inner">
+  <%= f.text_area :para1, size: "100x10" %>
+</div>
+
+<div class="row">
+  <%= f.label :para2 %>
+</div>
+<div class="row bottom-inner">
+  <%= f.text_area :para2, size: "100x10" %>
+</div>
+
+<div class="row">
+<%= f.label :para3 %>
+</div>
+<div class="row bottom-inner">
+<%= f.text_area :para3, size: "100x10" %>
+</div>
+
+<div class="row">
+<%= f.submit %>
+</div>
+
+<% end %>
+
