@@ -3,11 +3,7 @@ Myweb::Application.routes.draw do
   resources :blogs
   resources :projects
   resources :admins
-
-  namespace :admin do
-    resources :blogs
-    resources :projects
-  end
+  resources :presentations
 
   resources :sessions, only: [:new, :create, :destroy]
 

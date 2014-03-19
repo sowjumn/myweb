@@ -1,0 +1,27 @@
+ <%= form_for(@presentation) do |f| %>
+ <div class="row">
+   <%= f.label :title %>
+ </div>
+ <div class="row">
+   <%= f.text_field :title %>
+ </div>
+
+ <div class="row">
+   <%= f.label :description %>
+ </div>
+ <div class="row bottom-inner">
+   <%= f.text_area :description, size: "100x10" %>
+ </div>
+
+ <div class="row">
+   <%= f.label :embedlink %>
+ </div>
+ <div class="row bottom-inner">
+   <%= f.text_field :embedlink, size: "100x10" %>
+ </div>
+
+ <div class="row">
+   <%= f.submit %>
+ </div>
+
+ <% end %>

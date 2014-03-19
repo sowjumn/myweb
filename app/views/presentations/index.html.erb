@@ -1,0 +1,20 @@
+<div class="presentations-wrapper">
+  <% @all_presentations.each do |p| %>
+  <div class="row double-inner">
+    <div class="unit col1of2">
+      <div class="row title inner">
+        <%=p.title%>
+      </div>
+      <div class="row inner">
+        <p><%= p.description %></p>
+      </div>
+    </div>
+
+    <div class="lastUnit">
+      <div class="row double-inner">
+      <embed src="<%=p.embedlink%> width="400" height="300">
+      </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
