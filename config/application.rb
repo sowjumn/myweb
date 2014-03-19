@@ -28,8 +28,6 @@ module Myweb
         ActiveRecord::Base.connection
     end
 
-    config.action_dispatch.default_headers = {
-    'X-Frame-Options' => 'ALLOWALL'
-    }
+    config.action_dispatch.default_headers.merge!({'X-Frame-Options' => 'ALLOWALL'})
   end
 end
