@@ -8,6 +8,16 @@
       <div class="row  vertical-inner">
         <p><%= p.description %></p>
       </div>
+      <% if signed_in? %>
+        <div class="row">
+          <div class="unit col1of2">
+            <%= link_to "Edit Presentation", edit_presentation_path(p.id) %>
+          </div>
+          <div class="unit col1of2">
+            <%= link_to "Delete Presentation", {controller: 'presentations', action: 'destroy', id: p.id }, method: :delete %>
+          </div>
+        </div>
+      <% end %>
     </div>
 
     <div class="lastUnit">
