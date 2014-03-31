@@ -1,14 +1,13 @@
 class ProjectsController < ApplicationController
   def new
     @project = Project.new
-    @detail1 = Detail.new
-    @detail2 = Detail.new
-    @detail3 = Detail.new
-    @detail4 = Detail.new
-    @detail5 = Detail.new
+    5.times { @project.details.build }
   end
 
   def create
+    @project = Project.new(project_params)
+    @project.save
+    redirect_to root_url
   end
 
   def edit
@@ -28,6 +27,6 @@ class ProjectsController < ApplicationController
 
   private 
     def project_params
-      params.require(:project).permit(:title,:description,:detail1, :detail2, :detail3, :detail4, :detail5)
+      params.require(:project).permit(:title,:description,details_attributes: [:bullet])
     end
 end

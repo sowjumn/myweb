@@ -2,7 +2,6 @@
 <div class="row">
   <%= f.label :title %>
 </div>
-
 <div class="row">
   <%= f.text_field :title %>
 </div>
@@ -10,56 +9,20 @@
 <div class="row">
   <%= f.label :description %>
 </div>
-
 <div class="row bottom-inner">
   <%= f.text_area :description, size: "100x10" %>
 </div>
+
+<%= f.fields_for :details do |df| %>
+  <div class="row">
+    <%= df.label :bullet %>
+  </div>
+  <div class="row">
+    <%= df.text_field :bullet %>
+  </div>
 <% end %>
 
+<%= f.submit %>
 
-<%= form_for(@detail1) do |f| %>
-<div class="row">
-  <%= f.label :bullet %>
-</div>
-<div class="row">
-  <%= f.text_field :bullet %>
-</div>
-<% end %>
-
-<%= form_for(@detail2) do |f| %>
-<div class="row">
-  <%= f.label :bullet %>
-</div>
-<div class="row">
-  <%= f.text_field :bullet %>
-</div>
-<% end %>
-
-
-<%= form_for(@detail3) do |f| %>
-<div class="row">
-  <%= f.label :bullet %>
-</div>
-<div class="row">
-  <%= f.text_field :bullet %>
-</div>
-<% end %>
-
-<%= form_for(@detail4) do |f| %>
-<div class="row">
-  <%= f.label :bullet %>
-</div>
-<div class="row">
-  <%= f.text_field :bullet %>
-</div>
-<% end %>
-
-<%= form_for(@detail5) do |f| %>
-<div class="row">
-  <%= f.label :bullet %>
-</div>
-<div class="row">
-  <%= f.text_field :bullet %>
-</div>
 <% end %>
 
