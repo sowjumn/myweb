@@ -1,3 +1,3 @@
-class Details < ActiveRecord::Base
+class Detail < ActiveRecord::Base
   belongs_to :project
 end

@@ -2,6 +2,7 @@ Myweb::Application.routes.draw do
   root 'welcome#index'
   resources :blogs
   resources :projects
+  resources :details
   resources :admins
   resources :presentations
 
