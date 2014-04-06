@@ -1,16 +1,17 @@
-<h1>Here are a list of my Projects</h1>
-<% @projects.each do |project| %>
-<div class="row">
-  <%= project.title %>
+<div class="projects-container">
+  <% @projects.each do |project| %>
+  <div class="row vertical-inner">
+    <div class="row vertical-inner">
+      <h2><%= project.title %></h2>
+    </div>
+    <div class="row vertical-inner">
+      <p><%= project.description %></p>
+    </div>
+    <ul>
+      <% project.details.each do |d| %>
+      <li><%= d.bullet %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
 </div>
-<div class="row">
-  <%= project.description %>
-</div>
-<div class="row">
-  <ul>
-    <% project.details.each do |d| %>
-    <li><%= d.bullet %></li>
-    <% end %>
-  </ul>
-</div>
-<% end %>
