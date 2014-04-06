@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :signed_in_admin, only: [:new, :create, :edit, :update, :destroy] 
+
   def new
     @project = Project.new
     5.times { @project.details.build }
@@ -6,8 +8,11 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    @project.save
-    redirect_to root_url
+    if @project.save
+      redirect_to projects_url
+    else
+      render 'new'
+    end
   end
 
   def edit
@@ -16,13 +21,11 @@ class ProjectsController < ApplicationController
   def update
   end
 
-  def show
-  end
-
   def destroy
   end
 
   def index
+    @projects = Project.all
   end
 
   private 

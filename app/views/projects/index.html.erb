@@ -1,0 +1,16 @@
+<h1>Here are a list of my Projects</h1>
+<% @projects.each do |project| %>
+<div class="row">
+  <%= project.title %>
+</div>
+<div class="row">
+  <%= project.description %>
+</div>
+<div class="row">
+  <ul>
+    <% project.details.each do |d| %>
+    <li><%= d.bullet %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
