@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'mustache'
 gem 'hogan_assets'
 gem 'bcrypt-ruby'
+gem 'rdiscount'
 
 group :development, :test do
   gem 'dotenv-rails'
