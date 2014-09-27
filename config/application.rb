@@ -29,5 +29,9 @@ module Myweb
     end
 
     config.action_dispatch.default_headers.merge!({'X-Frame-Options' => 'ALLOWALL'})
+    config.assets.enabled = true  
+    config.assets.paths << "#{Rails.root}/app/assets/fonts"  
+
+    config.serve_static_assets = true
   end
 end

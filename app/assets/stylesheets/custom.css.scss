@@ -21,11 +21,6 @@ a.social-button {
   padding-top: 15px;
 }
 
-.blog-title {
-  font-size: 28px;
-  font-family: 'Helvetica Nueue'
-}
-
 .navigation {
   a {
   text-decoration: none;
@@ -42,6 +37,24 @@ a:hover {
 
 .blog-content {
   border-bottom: 1px solid gray;
+}
+
+.blog-title {
+  font-family: Amble;
+  font-size: 34px;
+}
+
+.blog-date {
+  margin-top: 10px;
+  color: #6F767E;
+  font-size: 18px;
+  font-family: Cambria;
+}
+
+.blog-para {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: Cambria;
 }
 
 .projects-container {

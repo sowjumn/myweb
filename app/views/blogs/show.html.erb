@@ -1,11 +1,9 @@
 <div class="double-inner">
   <div class="blog-title"><%=@blog.title%></div>
-
-  <p><%= mark(@blog.para1) %></p>
-
-  <p><%= mark(@blog.para2) %></p>
-
-  <p><%= mark(@blog.para3) %></p>
+  <div class="blog-date"><%= @blog.created_at.strftime("%b %e, %Y") %></div>
+  <div class='blog-para'><%= mark(@blog.para1) %></div>
+  <div class='blog-para'><%= mark(@blog.para2) %></div>
+  <div class='blog-para'><%= mark(@blog.para3) %></div>
 
   <div class="row">
     <% if signed_in? %>
