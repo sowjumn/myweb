@@ -7,6 +7,7 @@ class AdminsController < ApplicationController
   end
 
   def show
+    @welcome = Welcome.first
   end
 
   def create

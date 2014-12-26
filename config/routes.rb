@@ -1,10 +1,11 @@
 Myweb::Application.routes.draw do
-  root 'welcome#index'
+  root 'welcomes#index'
   resources :blogs
   resources :projects
   resources :details
   resources :admins
   resources :presentations
+  resources :welcomes
 
   resources :sessions, only: [:new, :create, :destroy]
 
