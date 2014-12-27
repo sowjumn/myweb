@@ -1,35 +1,21 @@
-<div class="inner navigation">
-  <div class="unit col1of3">
-    <h1>Sowjanya Mudunuri</h1>
-  </div>
-
-  <div class="unit col1of3 some-height">
-  </div>
-
-  <div class="unit col1of3">
-    <div class="unit inner top-padding">
-      <a href="/">About</a>
-    </div>
-
-    <div class="unit inner top-padding">
-      <a href="/projects">Projects</a>
-    </div> 
-
-    <div class="unit inner top-padding">
-      <a href="/presentations">Presentations</a>
-    </div>
-
-    <div class="lastUnit top-padding">
-      <a href="/blogs">Blog</a>
-    </div>
-  </div>
+<div class="header">
+  <%= image_tag('profile.png') %>
+  <h3 class="text-muted"><a href="/">Sowjanya Mudunuri</a></h3>
+  <nav>
+    <ul class="nav nav-pills pull-right">
+      <li role="presentation"><a href="/projects">Projects</a></li>
+      <li role="presentation"><a href="/blogs">Blog</a></li>
+      <li role="presentation"><a href="/presentations">Speaking</a></li>
+    </ul>
+  </nav>
 </div>
+
 <% if signed_in? %>
 <div class="row">
-  <div class="unit col1of2">
+  <div class="col-md-3">
     <%= link_to 'Admin', {controller: 'admins', action: 'show', id: current_admin.id} %>
   </div>
-  <div class="unit col1of2">
+  <div class="col-md-3">
     <%= link_to 'Signout', {controller: 'sessions', action: 'destroy', id: current_admin.id}, method: :delete %>
   </div>
 </div>
