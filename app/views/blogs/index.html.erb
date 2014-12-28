@@ -1,9 +1,9 @@
 <div class="body-padding">
 <div class="row">
   <div class="col-md-3">
-    <div class="row inner"><h2 class="blog-title">Posts</h2></div>
+    <div class="row"><h3 class="blog-title">Posts</h3></div>
     <% @blogs_all.each do |blog| %>
-    <div class="row inner">
+    <div class="row inner blog-lists">
       <a href="<%= blog_path(blog.id) %>"><%= blog.title %></a>
     </div>
     <% end %>
@@ -12,17 +12,17 @@
   <div class="col-md-8">
     <% @blogs_all[0..4].each do |blog| %>
     <div class="row">
-      <div class="">
-        <div class="blog-title"><%=blog.title%></div>
+      <h3 class="blog-title"><%=blog.title%></h3>
+      <div class="blog-content">
         <p><%= mark(blog.para1) %></p>
         <p><%= mark(blog.para2) %></p>
         <p><%= mark(blog.para3) %></p>
-        <div class="row">
-          <% if signed_in? %>
-          <%= link_to 'edit', edit_blog_path(blog)%>
-          <%= link_to 'Delete Blog', {controller: 'blogs', action: 'destroy', id: blog.id}, method: :delete %>
-          <% end %>
-        </div>
+      </div>
+      <div class="row">
+        <% if signed_in? %>
+        <%= link_to 'edit', edit_blog_path(blog)%>
+        <%= link_to 'Delete Blog', {controller: 'blogs', action: 'destroy', id: blog.id}, method: :delete %>
+        <% end %>
       </div>
     </div>
     <% end %>  
