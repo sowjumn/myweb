@@ -1,5 +1,6 @@
-<div class="row blog-container">
-  <div class="unit col1of4">
+<div class="body-padding">
+<div class="row">
+  <div class="col-md-3">
     <div class="row inner"><h2 class="blog-title">Posts</h2></div>
     <% @blogs_all.each do |blog| %>
     <div class="row inner">
@@ -8,10 +9,10 @@
     <% end %>
   </div>
 
-  <div class="lastUnit">
+  <div class="col-md-8">
     <% @blogs_all[0..4].each do |blog| %>
     <div class="row">
-      <div class="double-inner blog-content">
+      <div class="">
         <div class="blog-title"><%=blog.title%></div>
         <p><%= mark(blog.para1) %></p>
         <p><%= mark(blog.para2) %></p>
@@ -26,5 +27,6 @@
     </div>
     <% end %>  
   </div>
+</div>
 </div>
 
