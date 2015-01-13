@@ -19,6 +19,6 @@ class WelcomesController < ApplicationController
 
   private
     def welcome_params
-      params.require(:welcome).permit(:para1,:para2,:para3)
+      params.require(:welcome).permit(:para1,:para2,:para3,:para4)
     end 
 end

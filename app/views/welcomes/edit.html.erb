@@ -1,3 +1,4 @@
+<div class="body-padding home">
 <%= form_for(@welcome) do |f| %>
 	 <div class="row">
 		 <%= f.label :para1 %>
@@ -22,6 +23,15 @@
 	 </div>
 
 	 <div class="row">
+	 	 <%= f.label :para4 %>
+	 </div>
+	 
+	 <div class="row">
+	 	<%= f.text_area :para4, size: '150x20' %>
+	 </div>
+
+	 <div class="row">
 		 <%= f.submit %>
 	 </div>
 <% end %>
+</div>
