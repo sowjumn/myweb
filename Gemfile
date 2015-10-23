@@ -9,6 +9,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'bcrypt-ruby'
 gem 'rdiscount'
+gem 'paperclip', '~> 4.3'
 
 group :development, :test do
   gem 'dotenv-rails'
