@@ -1,11 +1,12 @@
 <div class="body-padding">
-  <div class="blog-title"><%=@blog.title%></div>
+  <div class="blog-img-title">
+    <%= image_tag @blog.avatar.url(:large), class: "blog-image" %>
+    <p class="blog-title"><%=@blog.title%></p>
+  </div>
   <div class="blog-date"><%= @blog.created_at.strftime("%b %e, %Y") %></div>
   <div class='blog-para'><%= mark(@blog.para1) %></div>
   <div class='blog-para'><%= mark(@blog.para2) %></div>
   <div class='blog-para'><%= mark(@blog.para3) %></div>
-
-  <%= image_tag @blog.avatar.url(:medium) %>
 
   <div class="row">
     <% if signed_in? %>
