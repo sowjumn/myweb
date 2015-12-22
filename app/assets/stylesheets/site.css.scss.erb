@@ -8,6 +8,19 @@
   src: url(<%= asset_path 'Amble-Regular.ttf' %>);
 }
 
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #E5EAEE;
+  font-family: 'Droid Serif';
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 2.5em;
+}
 
 p {
   font-weight: 400;
@@ -18,39 +31,33 @@ p {
   text-align: justify;
 }
 
-ul {
-  list-style-type: circle;
-  list-style-position: inside;
-}
-
-.header-margin {
-  margin-top: 47px;
-  margin-bottom: 0px;
-}
-
-.nav-margin {
-  margin-top: 42px;
-  margin-bottom: 0px;
-}
-
-.image-margin {
-  margin-top: 15px;
-  margin-left: 2%;
-}
-
-.header {
+header {
   margin-left: 125px;
   margin-right: 125px;
-}
+  text-align: center;
 
-.cust-right {
-  margin-right: -44px;
-}
+  figure {
+    margin: 15px;
+  }
 
+  nav {
+    margin: 15px;
+    li {
+      display: inline-block;
+      padding-left: 15px;
+    }
 
-body {
-  background-color: #E5EAEE;
-  font-family: 'Droid Serif';
+    li:not(:last-child):after {
+      content: "";
+      padding-left: 15px;
+      border-right: 1px solid blue;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 1.5em;
+    }
+  }
 }
 
 input {
@@ -102,9 +109,6 @@ pre {
   padding: 10px; 
 }
 
-h3 {
-  font-size: 23px;
-}
 
 
 
